@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/xText"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <EditText
+            android:id="@+id/command_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="@string/command_hint"
+            android:imeOptions="actionSend" />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="sendCommand"
+            android:text="@string/button_send" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/log_textview"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:clickable="false"
+        android:enabled="true"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="tLeftBtn"
+            android:id="@+id/tLeftBtn"
+            android:layout_weight="0.13"
+            android:layout_marginLeft="0dp"
+            android:onClick="tLeft" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="cstBtn2"
+            android:id="@+id/cstBtn2"
+            android:layout_weight="0.14"
+            android:onClick="cstBtn2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="tRightBtn"
+            android:id="@+id/tRightBtn"
+            android:layout_marginRight="0dp"
+            android:layout_weight="0.12"
+            android:onClick="tRight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="cstBtn1"
+            android:id="@+id/cstBtn1"
+            android:layout_weight="0.10"
+            android:onClick="cstBtn1" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleButton"
+            android:layout_weight="0.12"
+            android:checked="false"
+            android:textOff="gyroOff"
+            android:textOn="gyroOn"
+            android:onClick="gyroToggle"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="cstBtn3"
+            android:id="@+id/cstBtn3"
+            android:layout_weight="0.10"
+            android:onClick="cstBtn3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="tLeftB"
+            android:layout_weight="0.15"
+            android:onClick="tLeftB"
+            android:id="@+id/tLeftBtnB" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="cstBtn4"
+            android:id="@+id/cstBtn4"
+            android:layout_weight="0.15"
+            android:onClick="cstBtn4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="tRightB"
+            android:id="@+id/tRightBtnB"
+            android:layout_weight="0.14"
+            android:onClick="tRightB" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.54">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/gyroCommandText" />
+    </LinearLayout>
+
+</LinearLayout>
